@@ -19,15 +19,17 @@ rules.html          Full 26-section rulebook with sticky contents nav
 about.html          About the UCA, committee contacts, charities
 get-ranked.html     Fighter sign-up form  → Formspree
 contact.html        General contact form  → Formspree
-gallery.html        55-photo masonry gallery with lightbox
+gallery.html        329-photo masonry gallery, lightbox, batched loading
+posters.html        137-poster fight archive, grouped by year
 404.html            Custom error page
 assets/
   css/style.css     Single stylesheet, custom properties, no framework
   js/main.js        Nav, reveals, lightbox, forms, countdown, rankings engine
   data/rankings.js  1,929 fighter entries, 2012–2026 (generated from the WP site)
-  img/              85 optimised WebP images + logo/favicon
+  img/              487 optimised WebP images + logo/favicon
+                    champions/ 17 · posters/ 137 · gallery/ 289 · action/ 20 · vertical/ 8 · fighters/ 12
 .htaccess           HTTPS redirect, 404, gzip, caching, security headers
-sitemap.xml         51 URLs
+sitemap.xml         52 URLs
 robots.txt
 ```
 
@@ -63,8 +65,12 @@ python3 -m http.server 8791 --directory .
 
 ## Notes
 
-- No jQuery, no framework, no build step. Total page weight ~11 MB of images
-  across the whole site, all WebP, all lazy-loaded below the fold.
+- No jQuery, no framework, no build step. ~51 MB of images across the whole
+  site, all WebP, all lazy-loaded; the gallery renders 48 at a time behind a
+  Load more button so the initial page stays light.
+- The client's entire WordPress media library (592 of 595 items — the 3 misses
+  are Elementor editor thumbnails that 404 server-side) was downloaded and
+  re-encoded. Stock/theme images and UI screenshots were filtered out.
 - Content and photos migrated from the client's live WordPress site — see
   `ATTRIBUTION.md`.
 - Deployment steps for the client are in `DEPLOY-HOSTINGER.md`.

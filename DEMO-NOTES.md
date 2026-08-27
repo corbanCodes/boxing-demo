@@ -33,11 +33,13 @@ show the thing, send the payment link, send the files.
 | Rankings | ~44 separate pages | 1 page, searchable, 15 years |
 | Fighter sign-up | page exists, no form | working form → email |
 | Fight card | scattered across blog posts | one page, all bouts |
-| Photos | NextGen Gallery shortcodes (broken placeholders) | 55-photo gallery + lightbox |
+| Photos | NextGen Gallery shortcodes (broken placeholders) | 329-photo gallery + lightbox |
+| Fight posters | scattered in blog posts | 137-poster archive by year |
+| Champion photos | none on the site | 17 official belt portraits |
 | Pages | WordPress + Elementor + LiteSpeed cache | 52 static pages, no database |
 
-- 52 pages total (12 main + 40 news articles).
-- Every image re-encoded to WebP: 23 MB of originals → 11 MB total site.
+- 53 pages total (13 main + 40 news articles).
+- His whole media library pulled: 592 of 595 items, re-encoded to WebP (321 MB of originals → 51 MB).
 - No WordPress, so nothing to patch, no plugin updates, no login to get hacked.
 
 ## Content migrated
@@ -48,10 +50,14 @@ Fists, Gladiator, Coach of the Year, 40 news articles, and 85 images.
 
 ## Things to confirm with him
 
-- **Fighter photo captions.** The eight portraits on the Fighters page are from
-  the June card; only the four champions are labelled by name (Navo, Ibal,
-  Olson, Vega — matched by filename/rankings). The rest are uncaptioned on
-  purpose. Ask him to name them.
+- **Fighter photo captions.** 17 of his 28 reigning champions now have their
+  official belt portrait, matched by filename to the rankings data. The other
+  11 render as gold-accented text cards — ask him for those portraits if they
+  exist. The 15 contender photos and 6 coach photos are labelled from filenames;
+  worth a quick confirm.
+- **Victor Ibal** (Super Heavyweight champ) has no portrait in the library —
+  the only `ibal` file is a post-fight ring photo with three people in it, so I
+  left him as a text card rather than mislabel it.
 - **Store page.** Old site had "UCA Store — Coming soon…". Left out entirely.
   Ask if he wants it, and whether it's real commerce or a placeholder.
 - **Video page.** Old site used a TubePress shortcode that renders nothing.
