@@ -3,6 +3,8 @@
 Static rebuild of the UCA WordPress site (unitedcombatassociation.com) for
 **Tom Gaffney** — 916-612-6865 — uca500@yahoo.com.
 
+Repo: `github.com/corbanCodes/boxing-demo`
+
 Client hosts on **Hostinger** and buys the build outright (one-off, no monthly).
 Deliverable is plain HTML/CSS/JS — no build step, no database, no WordPress.
 
