@@ -74,3 +74,55 @@ Fists, Gladiator, Coach of the Year, 40 news articles, and 85 images.
 1. Zip the folder, send it (or upload for him — `DEPLOY-HOSTINGER.md` has both).
 2. He needs to upload the hidden `.htaccess` — that's the usual snag.
 3. Tell him rankings are one file to edit; show him the snippet in the deploy doc.
+
+---
+
+# Design B — the "it's busy" answer (4 Sep 2026)
+
+Tom's feedback: **"My first impression was, it's busy."** References he gave:
+**UFC.com** and **A1 Combat**.
+
+Design B lives at **/b/** — `boxing-demo.netlify.app/b/`. Design A is untouched at
+the root. Both have a pill bottom-right to flip between them, so he can compare
+without you sending two links.
+
+## What actually changed (say these on the call)
+
+The word "busy" almost always means *too many competing colours and too many
+things per screen*. So:
+
+| | Design A | Design B |
+|---|---|---|
+| Accent colours | navy + gold + red (3) | **one red** (`#d20a0a`, UFC's exact red) |
+| Page ground | dark everywhere | **light grey, white cards** — dark used only for hero/CTA |
+| Homepage sections | 9 | **5** |
+| Main nav items | 8 | **6** |
+| Homepage layout | stacked bands | UFC's **lead story + numbered Top Stories** |
+
+Nothing was cut from the site — every page, photo and ranking is still there.
+Design B just shows fewer things at once and leans on one accent instead of three.
+
+## Also new in B (worth mentioning, it shows the site is live)
+
+- **17 bouts** on the Oct 24 card, up from 14. The three announced since the
+  first demo are in: Juarez vs Dickinson, Montes-Diaz vs Lopez, Thompson vs Garces.
+- **News is current to Sep 4** (60 articles vs A's 40, which stops at Aug 27).
+- Champion portraits now pull in on news stories about that champion — e.g. the
+  John Olson "three titles" story uses his belt portrait automatically.
+
+## Flag to Tom
+
+- **Thompson's opponent changed.** The Aug 26 poster had Thompson vs Camarena
+  (Jr Cruiserweight); the Sep 4 poster has Thompson vs Garces (Light Heavyweight).
+  B lists the newer one and drops Camarena. Ask him which is right and whether
+  Camarena still has a bout.
+- **He has no video anywhere.** Not a gap in the migration — his Videos page was
+  an empty TubePress shortcode, there are zero video embeds across all 400 posts,
+  and all 150 of his "GIFs" are single-frame stills. If he wants video, the source
+  is his Instagram (@ucaboxing) and we can embed that feed.
+
+## If he picks B
+
+Move `/b/*` to the root and delete Design A (or keep A at `/a/` for a while).
+One line: `git mv` the files, drop the `.vswitch` block from the CSS and the
+`<div class="vswitch">` from the shells.

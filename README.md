@@ -8,6 +8,16 @@ Repo: `github.com/corbanCodes/boxing-demo`
 Client hosts on **Hostinger** and buys the build outright (one-off, no monthly).
 Deliverable is plain HTML/CSS/JS — no build step, no database, no WordPress.
 
+## Two designs
+
+- **Design A** — repo root. Dark navy + gold, the original demo.
+- **Design B** — `b/`. Black / white / one red, UFC-style. Built 4 Sep 2026 after
+  Tom said the first pass was "busy" and pointed at UFC.com. Shares every asset
+  in `assets/` (images, rankings data); has its own `b/assets/css/b.css` and
+  `b/assets/js/b.js`.
+
+Both carry a `.vswitch` pill linking to the other. Remove it before final handover.
+
 ## Structure
 
 ```
